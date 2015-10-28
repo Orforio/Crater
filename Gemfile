@@ -17,10 +17,11 @@ gem 'bootstrap-sass', '~> 3.3.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
-  gem 'byebug'
+	gem 'byebug'
+	gem 'factory_girl_rails'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+	gem 'web-console', '~> 2.0'
+	gem 'spring'
 end
