@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.5'
 
 gem 'rails', '4.2.4'
 gem 'pg'
@@ -25,6 +26,7 @@ end
 group :test do
 	gem 'cucumber-rails', require: false
 	gem 'database_cleaner'
+	gem 'codeclimate-test-reporter', require: false
 end
 
 group :development, :test do
