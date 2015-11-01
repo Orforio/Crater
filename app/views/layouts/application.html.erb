@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Crater</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Crater - <%= yield(:title) %></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<%= link_to 'Crater', root_path, class: 'navbar-brand' %>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">New setlist</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to 'Report issue on GitHub', 'https://github.com/PkerUNO/Crater/issues' %></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Crater<small>alpha</small></h1>
+			<p>Find a bug? Want a new feature? Please <a href="https://github.com/PkerUNO/Crater/issues">let me know on GitHub</a>. <strong>Please note</strong> that Crater is a work-in-progress and data may be modified or removed at any time.</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- ?php echo $this->Session->flash(); ? -->
+			</div>
+		</div>
+		<%= yield %>
+		<footer>
+			<p>&copy; <a href="http://www.sblorgh.org">Richard Whittaker</a> | Version "Andromeda"</p>
+		</footer>
+	</div>
 </body>
 </html>
