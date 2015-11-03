@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Setlists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Edit key</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @setlists.each do |setlist| %>
+      <tr>
+        <td><%= setlist.title %></td>
+        <td><%= setlist.author %></td>
+        <td><%= setlist.genre %></td>
+        <td><%= setlist.edit_key %></td>
+        <td><%= link_to 'Show', setlist %></td>
+        <td><%= link_to 'Edit', edit_setlist_path(setlist) %></td>
+        <td><%= link_to 'Destroy', setlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Setlist', new_setlist_path %>

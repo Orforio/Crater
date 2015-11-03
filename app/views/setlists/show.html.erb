@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @setlist.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @setlist.author %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @setlist.genre %>
+</p>
+
+<p>
+  <strong>Edit key:</strong>
+  <%= @setlist.edit_key %>
+</p>
+
+<%= link_to 'Edit', edit_setlist_path(@setlist) %> |
+<%= link_to 'Back', setlists_path %>
