@@ -1,9 +1,11 @@
 FactoryGirl.define do
   factory :setlist do
-    title "MyString"
-author "MyString"
-genre "MyString"
-edit_key "MyString"
+    sequence(:title) { |i| "Mixed Compilation #{i}" }
+		sequence(:author) { |i| "DJ #{i}" }
+		genre "Testcore"
+		
+		factory :setlist_with_known_edit_key do
+			edit_key "123456"
+		end
   end
-
 end
