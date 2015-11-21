@@ -27,6 +27,7 @@ group :test do
 	gem 'cucumber-rails', require: false
 	gem 'database_cleaner'
 	gem 'codeclimate-test-reporter', require: false
+	gem 'shoulda-matchers', '~> 3.0'
 end
 
 group :development, :test do
