@@ -1,14 +1,15 @@
 class SetlistsController < ApplicationController
 	before_action :set_setlist, only: [:show, :edit, :update, :destroy]
-
+	
+=begin
 	# GET /setlists
 	# GET /setlists.json
 	def index
 		@setlists = Setlist.all
 	end
+=end
 
 	# GET /setlists/1
-	# GET /setlists/1.json
 	def show
 	end
 
@@ -16,10 +17,12 @@ class SetlistsController < ApplicationController
 	def new
 		@setlist = Setlist.new
 	end
-
+	
+=begin
 	# GET /setlists/1/edit
 	def edit
 	end
+=end
 
 	# POST /setlists
 	def create
@@ -36,6 +39,7 @@ class SetlistsController < ApplicationController
 		end
 	end
 
+=begin
 	# PATCH/PUT /setlists/1
 	def update
 		respond_to do |format|
@@ -48,7 +52,9 @@ class SetlistsController < ApplicationController
 			end
 		end
 	end
+=end
 
+=begin
 	# DELETE /setlists/1
 	def destroy
 		@setlist.destroy
@@ -57,6 +63,7 @@ class SetlistsController < ApplicationController
 			# format.json { head :no_content }
 		end
 	end
+=end
 
 	private
 		# Use callbacks to share common setup or constraints between actions.

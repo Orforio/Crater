@@ -5,7 +5,7 @@ class Setlist < ActiveRecord::Base
 	
 	before_create :set_edit_key
 	
-	protected
+	private
 		def set_edit_key
 			self.edit_key = SecureRandom.hex(3)	# Generates a 3-byte, or 6-character hex string
 		end
