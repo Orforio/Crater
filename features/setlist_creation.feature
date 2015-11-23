@@ -11,11 +11,17 @@ Feature: Setlist creation
 		
 	Scenario: Not entering required information
 		Given I am on the "new setlist" page
-		When I click on the "Save setlist" button
-		Then I see the error "is required"
+		When I click the "Create Setlist" button
+		Then I see the error "Title can't be blank"
 		
 	Scenario: Entering invalid information
-		pending
+		Given I am on the "new setlist" page
+		When I input invalid setlist data
+			And I click the "Create Setlist" button
+		Then I see the error "Author is too long"
 		
 	Scenario: Saving a new setlist
-		pending
+		Given I am on the "new setlist" page
+		When I input valid setlist data
+			And I click the "Create Setlist" button
+		Then a new setlist with a valid edit key is created

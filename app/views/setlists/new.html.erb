@@ -1,5 +1,11 @@
-<h1>New Setlist</h1>
-
+<% content_for :title, "New setlist" %>
+<div class="row">
+	<div class="col-md-12">
+		<h2>New setlist</h2>
+		<div class="alert alert-info">
+			<p class="lead">Required information</p>
+			<p>Only <em>title</em> is a required field</p>
+		</div>
+	</div>
+</div>
 <%= render 'form' %>
-
-<%= link_to 'Back', setlists_path %>
