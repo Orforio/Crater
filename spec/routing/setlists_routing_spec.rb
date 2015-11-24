@@ -10,7 +10,7 @@ RSpec.describe SetlistsController, type: :routing do
 			expect(:get => "/setlists/new").to route_to("setlists#new")
 		end
 
-		xit "routes to #show" do
+		it "routes to #show" do
 			expect(:get => "/setlists/1").to route_to("setlists#show", :id => "1")
 		end
 

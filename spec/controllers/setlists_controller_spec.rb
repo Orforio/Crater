@@ -40,9 +40,9 @@ RSpec.describe SetlistsController, type: :controller do
 	end
 
 	describe "GET #show" do
-		xit "assigns the requested setlist as @setlist" do
+		it "assigns the requested setlist as @setlist" do
 			setlist = Setlist.create! valid_attributes
-			get :show, {:id => setlist.to_param}, valid_session
+			get :show, { id: setlist.to_param }, valid_session
 			expect(assigns(:setlist)).to eq(setlist)
 		end
 	end
