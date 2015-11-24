@@ -1,6 +1,12 @@
 <% content_for :title, "A simple setlist management tool for DJs" %>
 <div class="row">
 	<div class="col-md-12">
+	<% if notice %>
+		<div class="alert alert-danger" role="alert">
+			<p class="lead">Invalid Setlist</p>
+			<p>Please check the view key of your setlist and try again</p>
+		</div>
+	<% end %>
 		<h2>A simple setlist management tool for DJs</h2>
 		<p>Welcome to Crater. With this project my aim is to get to grips with MVC frameworks (namely Rails), front-end frameworks (Bootstrap), TDD and best design practices. While making a semi-useful application!</p>
 		<p>The first public alpha of Crater lets users:</p>
@@ -16,7 +22,7 @@
 			<li>suggest an optimal track order for harmonic mixing</li>
 			<li>let users register and keep all their setlists in one place</li>
 		</ul>
-		<div class="alert alert-danger">
+		<div class="alert alert-warning">
 			<p class="lead">Warning</p>
 			<p>This project is still in the early phases of development. The database schema might change, requiring data loss or security breaches may be found. Please don't input any information you want kept private during this alpha stage. Crater currently has no user registration and no personal data is stored. <strong>By using Crater alpha you understand that there is no guarantee any data you submit will be kept private and that data loss may occur without warning</strong>.</p>
 		</div>

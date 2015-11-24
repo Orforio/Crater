@@ -8,7 +8,7 @@ module CommonHelpers
 		when 'invalid view setlist'
 			'setlists/zzz'
 		when 'view setlist'
-			setlist_path(1234)
+			setlist_path("OEJ4nN") # HashIDs translates to 1234
 		else
 			fail!
 		end

@@ -5,7 +5,7 @@ FactoryGirl.define do
 		genre 'Testcore'
 		
 		factory :setlist_with_known_view_key do
-			id 1234
+			id 1234 # HashIDs translates to OEJ4nN
 			title 'Mixed Compilation With Known View Key'
 		end
 		

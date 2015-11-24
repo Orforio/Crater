@@ -1,4 +1,3 @@
-@focus
 Feature: Setlist viewing
 	As an anonymous user,
 	I want to view a setlist I have a view code for,
