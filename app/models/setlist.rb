@@ -5,6 +5,8 @@ class Setlist < ActiveRecord::Base
 	
 	before_create :set_edit_key
 	
+	hash_id salt: Rails.application.secrets.hashids_salt, size: 6
+	
 	private
 		def set_edit_key
 			self.edit_key = SecureRandom.hex(3)	# Generates a 3-byte, or 6-character hex string

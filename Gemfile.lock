@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/gdsrmygdsrjr/hashids_rails.git
+  revision: 9dff55ce6e4b9aca8dab1072a7efe8405e5c65ba
+  specs:
+    hashids_rails (0.0.2)
+      hashids
+      rails (~> 4.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -89,6 +97,7 @@ GEM
       multi_json (~> 1.3)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hashids (1.0.2)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
@@ -216,6 +225,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_girl_rails
+  hashids_rails!
   jbuilder (~> 2.0)
   jquery-rails
   pg
