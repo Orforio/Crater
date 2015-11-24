@@ -1,3 +1,7 @@
+Given(/^a valid setlist with known view key exists$/) do
+	FactoryGirl.create(:setlist_with_known_view_key)
+end
+
 When(/^I input valid setlist data$/) do
 	within('#new_setlist') do
 		fill_in 'Title', with: 'Mixed Compilation 1'

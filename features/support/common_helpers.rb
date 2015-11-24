@@ -5,6 +5,10 @@ module CommonHelpers
 			root_path
 		when 'new setlist'
 			new_setlist_path
+		when 'invalid view setlist'
+			'setlists/zzz'
+		when 'view setlist'
+			setlist_path(1234)
 		else
 			fail!
 		end
