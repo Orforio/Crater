@@ -30,7 +30,7 @@ class SetlistsController < ApplicationController
 
 		respond_to do |format|
 			if @setlist.save
-				format.html { redirect_to @setlist, notice: 'Setlist was successfully created.' }
+				format.html { redirect_to @setlist, notice: "Setlist created. Edit key: #{@setlist.edit_key}" }
 				# format.json { render :show, status: :created, location: @setlist }
 			else
 				format.html { render :new }

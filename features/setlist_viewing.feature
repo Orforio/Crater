@@ -10,4 +10,4 @@ Feature: Setlist viewing
 	Scenario: Accessing a valid setlist
 		Given a valid setlist with known view key exists
 		When I visit the "view setlist" page
-		Then I see the text "Title: Mixed Compilation With Known View Key"
+		Then I see the text "Mixed Compilation With Known View Key"
